@@ -14,7 +14,7 @@
     <description>Módulo combinado da loja virtual devops</description>
     <properties>
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
-        <gwtModule>br.com.devopsnapratica.gwt.devopsnapraticaAdmin</gwtModule>
+        <!--><gwtModule>br.com.devopsnapratica.gwt.devopsnapraticaAdmin</gwtModule><!-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- httpsPort and httpPort are used by embeded jetty server.-->
         <!-- Make sure the following httpsPort matches what's in the runtime-properties file,  -->
@@ -31,6 +31,7 @@
                 <configuration>
                     <webappDirectory>${webappDirectory}</webappDirectory>
                     <overlays>
+                        <!-->
                         <overlay>
                             <id>admin-js</id>
                             <groupId>br.com.devopsnapratica</groupId>
@@ -40,6 +41,7 @@
                             </includes>
                             <targetPath>admin</targetPath>
                         </overlay>
+                        <!-->
                         <!-- site is overlayed first so that its runtime properties are set,
                         resulting in the admin properties being ignored. This is the default
                         behavior for the combined application -->
@@ -53,6 +55,7 @@
                                 <exclude>WEB-INF/classes/rebel.xml</exclude>
                             </excludes>
                         </overlay>
+                        <!-->
                         <overlay>
                             <id>admin-regular</id>
                             <groupId>br.com.devopsnapratica</groupId>
@@ -64,6 +67,7 @@
                                 <exclude>WEB-INF/classes/rebel.xml</exclude>
                             </excludes>
                         </overlay>
+                        <!-->
                     </overlays>
                 </configuration>
             </plugin>
@@ -137,6 +141,7 @@
                             <resource>
                                 <directory>../site/src/main/resources</directory>
                             </resource>
+                            <!-->
                             <resource>
                                 <directory>../admin/target/admin/WEB-INF/classes</directory>
                             </resource>
@@ -146,6 +151,7 @@
                             <resource>
                                 <directory>../admin/src/main/resources</directory>
                             </resource>
+                            <!-->
                         </resources>
                     </classpath>
                     <web>
@@ -155,10 +161,12 @@
                                 <target>/</target>
                                 <directory>../site/src/main/webapp</directory>
                             </resource>
+                            <!-->
                             <resource>
                                 <target>/</target>
                                 <directory>../admin/src/main/webapp</directory>
                             </resource>
+                            <!-->
                         </resources>
                     </web>
                 </configuration>
@@ -192,20 +200,24 @@
                     <version>1.0</version>
                     <type>war</type>
                 </dependency>
+                <!-->
                 <dependency>
                     <groupId>br.com.devopsnapratica</groupId>
                     <artifactId>admin</artifactId>
                     <version>1.0</version>
                     <type>war</type>
                 </dependency>
+                <-->
             </dependencies>
         </profile>
     </profiles>
     <dependencies>
+        <!-->
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
             <artifactId>broadleaf-admin-module</artifactId>
         </dependency>
+        <!-->
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
             <artifactId>broadleaf-contentmanagement-module</artifactId>
