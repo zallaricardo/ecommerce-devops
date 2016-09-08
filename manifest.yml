@@ -1,11 +1,11 @@
 applications:
 - name: loja-virtual-devops
   memory: 512M
-#  disk_quota: 512M
+#  disk_quota: 1024M
 #  path: /dev/loja-virtual-devops
   buildpack: https://github.com/cloudfoundry/java-buildpack
-# host: nodejs001
-#  path: /dev/loja-virtual-devops
+  host: loja-virtual-devops
+  path: lib/maven-ant-tasks-2.1.3.jar
 # host: nodejs001
 # domain: mybluemix.net
 #  command: java
