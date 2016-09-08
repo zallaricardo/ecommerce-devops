@@ -1,0 +1,15 @@
+applications:
+- name: loja-virtual-devops
+  memory: 512M
+#  disk_quota: 512M
+#  path: /dev/loja-virtual-devops
+  buildpack: https://github.com/cloudfoundry/java-buildpack
+# host: nodejs001
+#  path: /dev/loja-virtual-devops
+# host: nodejs001
+# domain: mybluemix.net
+#  command: java
+  timeout: 180
+# services:
+# - mongo_8917
+#   env:
