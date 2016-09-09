@@ -1,15 +1,16 @@
+---
 applications:
-- name: loja-virtual-devops
+- name: ecommerce-devops
   memory: 512M
 #  disk_quota: 1024M
 #  path: /dev/loja-virtual-devops
   buildpack: https://github.com/cloudfoundry/java-buildpack
-  host: loja-virtual-devops
+  host: ecommerce-devops
   path: lib/maven-ant-tasks-2.1.3.jar
-# host: nodejs001
-# domain: mybluemix.net
-#  command: java
+  domain: mybluemix.net
   timeout: 180
+#  command: java
+# host: nodejs001
 # services:
 # - mongo_8917
 #   env:
