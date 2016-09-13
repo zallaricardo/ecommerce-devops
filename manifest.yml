@@ -1,14 +1,14 @@
----
 applications:
 - name: ecommerce-devops
   memory: 512M
 #  disk_quota: 1024M
-#  path: /dev/loja-virtual-devops
+  path: Site/target/devopsnapratica.war
   buildpack: https://github.com/cloudfoundry/java-buildpack
   host: ecommerce-devops
-  path: lib/maven-ant-tasks-2.1.3.jar
+#  path: lib/maven-ant-tasks-2.1.3.jar
   domain: mybluemix.net
   timeout: 180
+  instances: 1
 #  command: java
 # host: nodejs001
 # services:
